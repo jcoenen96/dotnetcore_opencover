@@ -30,7 +30,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: |
-    dotnet tool install dotnet-testx
+    dotnet tool install -g dotnet-testx
     dotnet testx --discover-projects
   displayName: 'Unit testing'
 
