@@ -35,13 +35,14 @@ steps:
     dotnet testx --project all
   displayName: 'Unit testing'
 
-
 - task: reportgenerator@4
   inputs:
     reports: 'coverage\results.xml'
     targetdir: 'coverageResults'
 
-# - task: VSTest@2
-#   inputs:
-#     platform: '$(buildPlatform)'
-#     configuration: '$(buildConfiguration)'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverageResults/cobertura.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/coverageResults'
+    failIfCoverageEmpty: true
