@@ -31,7 +31,7 @@ steps:
 
 - script: |
     dotnet tool install -g dotnet-testx
-    dotnet testx --projects all
+    dotnet testx --project all
   displayName: 'Unit testing'
 
 
