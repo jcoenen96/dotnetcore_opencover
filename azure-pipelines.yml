@@ -44,5 +44,5 @@ steps:
   inputs:
     codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(System.DefaultWorkingDirectory)\coverageResults\Cobertura.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/coverageResults'
+    reportDirectory: '$(System.DefaultWorkingDirectory)\coverageResults'
     failIfCoverageEmpty: true
