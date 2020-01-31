@@ -38,8 +38,8 @@ steps:
 
 - task: reportgenerator@4
   inputs:
-    reports: 'results.xml'
-    targetdir: 'coverage'
+    reports: 'coverage\results.xml'
+    targetdir: 'coverageResults'
 
 # - task: VSTest@2
 #   inputs:
