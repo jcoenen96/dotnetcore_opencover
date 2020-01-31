@@ -39,6 +39,7 @@ steps:
   inputs:
     reports: 'coverage\results.xml'
     targetdir: 'coverageResults'
+    reporttypes: 'Cobertura'
 
 - task: PublishCodeCoverageResults@1
   inputs:
